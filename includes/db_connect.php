@@ -6,7 +6,7 @@ date_default_timezone_set('Africa/Kigali');
 
 // 2. Database credentials (update these when you move to a live server)
 $host = 'localhost';
-$dbname = 'malvyn_blog';
+$dbname = 'blog_db';
 $db_user = 'root'; 
 $db_pass = ''; 
 
