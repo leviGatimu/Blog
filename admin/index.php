@@ -21,7 +21,7 @@ $recentPosts = $stmt->fetchAll();
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Dashboard - Levi's Blog</title>
+    <title>Dashboard </title>
     <script src="https://cdn.tailwindcss.com"></script>
     <style>
         /* A little custom CSS to make the scrollbar look sleek */
@@ -64,7 +64,7 @@ $recentPosts = $stmt->fetchAll();
     <main class="flex-1 flex flex-col h-screen overflow-y-auto">
         
         <header class="h-16 bg-white border-b border-gray-200 flex items-center justify-between px-8 shadow-sm">
-            <h1 class="text-2xl font-bold text-gray-800">Welcome back, Levi! 👋</h1>
+            <h1 class="text-2xl font-bold text-gray-800">Welcome back, Ibrahim! 👋</h1>
             <div class="flex items-center gap-4">
                 <a href="../public/index.php" target="_blank" class="text-sm font-medium text-blue-600 hover:text-blue-800 bg-blue-50 px-4 py-2 rounded-lg transition-colors">
                     View Live Blog
