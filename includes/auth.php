@@ -1,10 +1,13 @@
 <?php
 // includes/auth.php
-session_start();
+
+// Only start a session if one isn't already active
+if (session_status() === PHP_SESSION_NONE) {
+    session_start();
+}
 
 // Check if the admin session exists
 if (!isset($_SESSION['admin_logged_in']) || $_SESSION['admin_logged_in'] !== true) {
-    // If not logged in, redirect to login page
     header("Location: login.php");
     exit;
 }
