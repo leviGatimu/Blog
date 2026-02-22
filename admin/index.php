@@ -12,8 +12,8 @@ $totalPosts = $stmt->fetch()['total'];
 $stmt = $pdo->query("SELECT COUNT(*) as drafts FROM posts WHERE status = 'draft'");
 $totalDrafts = $stmt->fetch()['drafts'];
 
-// 3. Get the 5 most recent posts
-$stmt = $pdo->query("SELECT title, status, created_at FROM posts ORDER BY created_at DESC LIMIT 5");
+// 3. Get the 5 most recent posts (Notice 'id' is now included here!)
+$stmt = $pdo->query("SELECT id, title, status, created_at FROM posts ORDER BY created_at DESC LIMIT 5");
 $recentPosts = $stmt->fetchAll();
 ?>
 <!DOCTYPE html>
@@ -21,7 +21,7 @@ $recentPosts = $stmt->fetchAll();
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Dashboard </title>
+    <title>Dashboard</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <style>
         /* A little custom CSS to make the scrollbar look sleek */
@@ -144,7 +144,7 @@ $recentPosts = $stmt->fetchAll();
                                     </td>
                                     <td class="px-6 py-4 text-gray-500"><?php echo date('M j, Y', strtotime($post['created_at'])); ?></td>
                                     <td class="px-6 py-4 text-right">
-                                        <a href="#" class="text-blue-600 hover:text-blue-800 font-medium hover:underline">Edit</a>
+                                        <a href="edit_post.php?id=<?php echo $post['id']; ?>" class="text-blue-600 hover:text-blue-800 font-medium hover:underline">Edit</a>
                                     </td>
                                 </tr>
                                 <?php endforeach; ?>
