@@ -27,7 +27,7 @@ if (!$post) {
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Edit Post - Levi's Admin</title>
     <script src="https://cdn.tailwindcss.com"></script>
-    <script src="https://cdn.tiny.cloud/1/no-api-key/tinymce/6/tinymce.min.js" referrerpolicy="origin"></script>
+    <script src="https://cdn.tiny.cloud/1/i69c95x51v30gabihq8civm4i39tlacgcg5g09s6iolbbunq/tinymce/6/tinymce.min.js" referrerpolicy="origin"></script>
     <style>
         .dragover { border-color: #3b82f6; background-color: #eff6ff; }
     </style>
