@@ -98,6 +98,19 @@ require '../includes/db_connect.php';
     </main>
 
     <script>
+        // Add this right below the tinymce.init block
+function savePost() {
+    // 1. Force TinyMCE to copy its content into the hidden textarea
+    tinymce.triggerSave(); 
+
+    const form = document.getElementById('postForm');
+    
+    // 2. Make the browser check if Title and Slug are filled out
+    if (form.reportValidity()) { 
+        // 3. If everything is good, submit the form!
+        form.submit();
+    }
+}
         // 1. Initialize TinyMCE Editor
         tinymce.init({
             selector: '#editor',
